@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 50%);
+
+}
+.container{
+    margin: auto;
+    width: 300px;
+    padding: 12px 20px;
+    background-color: white;
+    box-shadow: 0 7px 10px #000;
+    border-radius: 15px;
+    text-align: center;
+}
+.container h3{
+    font-size: 30px;
+    padding-bottom: 12px;
+    text-transform: capitalize;
+}
+.form-element{
+    padding-bottom: 12px;
+}
+.form-element label{
+    text-align: justify;
+    padding-bottom: 5px;
+    font-size: 12px;
+    display: block;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.form-element .input-bar{
+    position: relative;
+}
+.form-element input{
+    width: 100%;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(210, 208, 208);
+    background-color: transparent;
+}
+.form-element input:focus{
+    border-color: #333333;
+}
+.form-element img{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form-element img.view{
+    position: absolute;
+    right: 0;
+    left: auto;
+    display: none;
+}
+.form-element .error{
+    display: inline-block;
+    width: 100%;
+    color: red;
+    text-align:justify;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+.form .submit{
+    width: 80%;
+    height: 24px;
+    background:#B9D9EB;
+    padding:0 15px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.login .submit:hover{
+    background-color:#8EC5FC;
+    color:#5e5e5e;
+}
+.icons{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    margin-top: 7px;
+}
+.icons img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.log{
+    text-align: justify;
+    font-size: 14px;
+    padding: 14px 0;
+}
+.log a{
+    color: #6699CC;
+}
+.log a:hover{
+    text-decoration: underline;
+}
+

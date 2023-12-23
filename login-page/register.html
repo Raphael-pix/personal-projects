@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+</head>
+<body>
+  <div class="container">
+    <h3>sign in</h3>
+    <form action="config.php" class="form" id="register" novalidate>
+      <div class="form-element">
+        <label for="name">name</label>
+        <div class="input-bar">
+          <img src="images/icons8-person-16.png" alt="" width="14px" height="14px">
+          <input type="text" name="name" class="name" id="name" required>
+        </div>
+        <span class="error"></span>
+      </div>
+
+      <div class="form-element">
+        <label for="email">email</label>
+        <div class="input-bar">
+          <img src="images/icons8-email-48 (1).png" alt="" width="14px" height="14px">
+          <input type="email" name="email" class="email" id="email" required>
+        </div>
+        <span class="error"></span>
+      </div>
+      
+      <div class="form-element">
+        <label for="password">password</label>
+        <div class="input-bar">
+          <img src="images/icons8-padlock-50 (1).png" alt="" width="14px" height="14px">
+          <input type="password" name="password" class="password" id="password" required>
+          <img src="images/icons8-eye-50.png" alt="" width="14px" height="14px" class="view">
+        </div>
+        <span class="error"></span>
+      </div>
+      
+      <div class="form-element">
+        <label for="conpassword">confirm password</label>
+        <div class="input-bar">
+          <img src="images/icons8-padlock-50 (1).png" alt="" width="14px" height="14px">
+          <input type="password" name="conpassword" class="password" id="conpassword" required>
+          <img src="images/icons8-eye-50.png" alt="" width="14px" height="14px" class="view">
+        </div>
+        <span class="error"></span>
+      </div>
+      
+      <button type="submit" class="submit" id="submit-btn">create account</button>
+    </form>
+    
+    <p>or sign up with</p>
+    <div class="icons">
+      <img src="images/icons8-google-96.png" alt="google-icon"  width="30px" height="30px">
+      <img src="images/icons8-facebook-96.png" alt="facebook-icon" width="30px" height="30px">
+      <img src="images/icons8-twitterx-96.png" alt="twitter-icon" width="30px" height="30px">
+    </div>
+    <p class="log">Already have an account? <a href="sign-in.html">Sign in</a></p>
+  </div>
+<script src="script.js" defer></script>
+</body>
+</html>

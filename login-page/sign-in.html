@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+</head>
+<body>
+  <div class="container">
+    <h3>sign up</h3>
+    <form action="/" class="form" id="login">
+      <div class="form-element">
+        <label for="email">email</label>
+        <div class="input-bar">
+          <img src="images/icons8-email-48 (1).png" alt="" width="14px" height="14px">
+          <input type="email" name="email" required>
+        </div>
+        <span class="error"></span>
+      </div>
+      
+      <div class="form-element">
+        <label for="password">password</label>
+        <div class="input-bar">
+          <img src="images/icons8-padlock-50 (1).png" alt="" width="14px" height="14px">
+          <input type="password" name="password" required>
+          <img src="images/icons8-eye-50.png" alt="" width="14px" height="14px" class="view">
+        </div>
+        <span class="error"></span>
+      </div>
+      
+      <button type="submit" class="submit">Login</button>
+    </form>
+    
+    <p>or sign in with:</p>
+    <div class="icons">
+      <img src="images/icons8-google-96.png" alt="google-icon"  width="30px" height="30px">
+      <img src="images/icons8-facebook-96.png" alt="facebook-icon" width="30px" height="30px">
+      <img src="images/icons8-twitterx-96.png" alt="twitter-icon" width="30px" height="30px">
+    </div>
+    <p class="log">Don't have an account? <a href="register.html">Sign up</a></p>
+  </div>
+<script src="script.js" defer></script>
+</body>
+</html>
