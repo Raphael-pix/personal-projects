@@ -139,6 +139,10 @@ main .right{
     overflow: hidden;
     display: flex;
 }
+.messages .message .data .mess{
+    width: 95%;max-height: 40px;
+    overflow: hidden;
+}
 .messages .message .data span{
     width: 8px;height: 8px;
     border-radius: 50%;
@@ -146,6 +150,8 @@ main .right{
     display: inline-block;
     margin-top: 5px;
     flex-shrink: 0;
+    position: absolute;
+    right: 2%;
 }
 .messages .message .data .time{
     position: absolute;
@@ -161,6 +167,9 @@ main .right{
     font-size: .8rem;
     padding: .4rem 0;
 }
+.activity header .nav-bar a:hover{
+    color: var(--primary-color);
+}
 .activity header .nav-bar a.active{
     border-bottom: 2px solid var(--dark-grey);
 }
@@ -170,6 +179,7 @@ main .right{
     margin: .5rem 0;
     display: flex;
     gap: .5rem;
+    position: relative;
 }
 .activity .group .group-img{
     width: 70px;height: 70px;
@@ -189,6 +199,11 @@ main .right{
     font-weight: 400;
     color: var(--black);
 }
+.group .buttons{
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
 .group .buttons button{
     display: flex;
     gap: .6rem;
@@ -204,8 +219,14 @@ main .right{
 .group .buttons .message{
     background-color: var(--primary-color);
 }
+.group .buttons .message:hover{
+    background-color: var(--active-blue);
+}
 .group .buttons .leave{
     background-color: #FF0000;
+}
+.group .buttons .leave:hover{
+    background-color: #dd0202;
 }
 
 /* end of activity/messages-right side */
