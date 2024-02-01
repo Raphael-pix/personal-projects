@@ -38,6 +38,25 @@ button{
 button:hover{
     background:var(--active-blue);
 }
+.search-bar{
+    display: flex;
+    padding: .3rem .7rem;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    background-color: white;
+}
+.search-bar i{
+    color: var(--dark-grey);
+}
+ .search-bar input{
+    background-color: transparent;
+    border: none;
+    width: 220px;
+    margin-left: 10px;
+}
+.search-bar input:focus{
+    outline:transparent;
+}
 /*  end of general styles */
 
 /* start of header */
@@ -55,25 +74,6 @@ header.topnav a{
     font-weight: 600;
     color: white;
     letter-spacing: 2px;
-}
-.topnav .search-bar{
-    display: flex;
-    padding: .3rem .7rem;
-    border: 1px solid var(--grey);
-    border-radius: 20px;
-    background-color: white;
-}
-.topnav .search-bar i{
-    color: var(--dark-grey);
-}
-.topnav .search-bar input{
-    background-color: transparent;
-    border: none;
-    width: 220px;
-    margin-left: 10px;
-}
-.topnav .search-bar input:focus{
-    outline:transparent;
 }
 .topnav .header-img{
     width: 60px;height: 60px;
