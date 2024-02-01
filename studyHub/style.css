@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+:root{
+    --primary-color:#2A8DC8;
+    --black:#1E1E1E;
+    --grey:#D9D9D9;
+    --dark-grey:#6C757D;
+    --active-blue:#0560ba;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/*  start of general styles */
+button{
+    height: 40px;
+    background:var(--primary-color);
+    padding:0 3rem;
+    text-align: center;
+    color: white;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover{
+    background:var(--active-blue);
+}
+/*  end of general styles */
+
+/* start of header */
+header.topnav{
+    background-color:var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    color: white;
+    padding:  0.5rem 3rem;
+}
+header.topnav a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+.topnav .search-bar{
+    display: flex;
+    padding: .3rem .7rem;
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    background-color: white;
+}
+.topnav .search-bar i{
+    color: var(--dark-grey);
+}
+.topnav .search-bar input{
+    background-color: transparent;
+    border: none;
+    width: 220px;
+    margin-left: 10px;
+}
+.topnav .search-bar input:focus{
+    outline:transparent;
+}
+.topnav .header-img{
+    width: 60px;height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.topnav .header-img img{
+    width: 100%;height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.topnav .hMenu{
+    display: none;
+    cursor:pointer;
+}
+/* end of header */
+
+@media screen and (max-width:650px) {
+    header.topnav{
+        gap: 1rem;
+        padding:  0.5rem 1rem;
+    }
+    header.topnav a{
+        font-size: 1.2rem;
+        text-wrap:wrap;
+    }
+    .topnav .search-bar input{
+        max-width: 120px;
+    }
+}
+@media screen and (max-width:375px) {
+    header.topnav{
+        padding:  1rem;
+    }
+    header.topnav a{
+        font-size: 1rem;
+    }
+    .topnav .search-bar{
+        display: none;
+    }
+    .topnav .header-img{
+        display: none;
+    }
+    .topnav .hMenu{
+        display: block;
+    }
+
+
+
+}

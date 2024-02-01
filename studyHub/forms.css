@@ -1,32 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-}
-:root{
-    --primary-color:#2A8DC8;
-    --black:#1E1E1E;
-    --grey:#D9D9D9;
-    --dark-grey:#6C757D;
-}
+
 body{
-    display: flex;
-    min-height: 100vh;
-    background-color: #8EC5FC;
     background:url(images/form-images-large.jpg);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
 }
 .container{
+    width: 40%;
     padding: 1rem 1.3rem;
     background-color: white;
     text-align: center;
     z-index: 1000;
-    flex-basis: 50%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,21 +90,11 @@ body{
     visibility: visible;
 }
 .form .submit{
-    height: 40px;
-    background:var(--primary-color);
-    padding:0 3rem;
     margin-bottom: .5rem;
-    text-align: center;
-    color: white;
-    font-size: .9rem;
     font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
 }
 .form .submit:hover{
-    background-color:#0560ba;
+    background-color:var(--active-blue);
 }
 .form #logIn-btn{
     padding:0 5rem;
@@ -201,6 +176,7 @@ form .form-element .profile-pic img{
     color:var(--dark-grey) ;
     font-size: .7rem;
     cursor: pointer;
+    overflow: hidden;
 }
 #intrests .input-bar label:hover{
     color:var(--black) ;
@@ -229,11 +205,18 @@ form .skip:hover{
 
 
 
-
+@media screen and (max-width:1100px){
+    .container{
+        width: 50%;
+    }
+    .form #logIn-btn{
+        padding:0 3rem;
+    }
+}
 
 @media screen and (max-width:768px){
-    .container h1{
-        font-size: 1.2rem;
+    .container{
+        width: 53%;
     }
     .container .form h2{
         font-size: 1.3rem;
@@ -248,6 +231,10 @@ form .skip:hover{
     .form .option .log{
         font-size: .7rem;
     }
+
+    #intrests .input-bar{
+        grid-template-columns: repeat(2,minmax(50px,150px));
+    }
 }
 
 @media screen and (max-width:412px){
@@ -255,8 +242,9 @@ form .skip:hover{
         background:initial;
     }
     .container{
+        width: 100%;
         margin: auto;
-        padding: 1rem 0;
+        padding: 1rem;
         flex-basis: auto;
     }
     .container .form,.container #profile{
@@ -271,5 +259,12 @@ form .skip:hover{
     }
     .form .option .log{
         font-size: initial;
+    }
+    .form #logIn-btn{
+        padding:0 5rem;
+    }
+
+    #intrests .input-bar{
+        grid-template-columns: repeat(3,minmax(50px,150px));
     }
 }
