@@ -92,6 +92,7 @@ body{
 .form .submit{
     margin-bottom: .5rem;
     font-weight: 700;
+    font-size: .8rem;
 }
 .form .submit:hover{
     background-color:var(--active-blue);
@@ -124,7 +125,15 @@ body{
     text-decoration: underline;
 }
 
-
+.container .form .forget{
+    display: inline-block;
+    font-size: .8rem;
+    color: var(--primary-color);
+    margin-bottom:.8rem;
+}
+.container .form .forget:hover{
+    text-decoration: underline;
+}
 /* start of profile css */
 .container #profile{
     width: 65%;

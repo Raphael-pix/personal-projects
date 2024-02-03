@@ -59,6 +59,7 @@ button:hover{
 }
 /*  end of general styles */
 
+
 /* start of header */
 header.topnav{
     background-color:var(--primary-color);
@@ -68,6 +69,8 @@ header.topnav{
     gap: 1.5rem;
     color: white;
     padding:  0.5rem 3rem;
+    /* position: fixed; */
+    /* top: 0;right: 0;left: 0; */
 }
 header.topnav a{
     font-size: 1.5rem;
@@ -92,6 +95,151 @@ header.topnav a{
 }
 /* end of header */
 
+
+/* start of task bar */
+.taskbar {
+    padding: .6rem 1rem;
+    max-width: 270px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.084);
+    grid-area: aside;
+}
+
+.taskbar .title h1{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+ .taskbar-header{
+    color: var(--dark-grey);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: .5rem 0;
+ }
+ .taskbar-header .no{
+    background-color: var(--dark-grey);
+    color: white;
+    font-size: .6rem;
+    font-weight: 600;
+    padding: 0 5px ;
+    margin-left: 5px;
+ }
+
+ /* start of messages */
+ .taskbar .messages .message{
+    font-size: .6rem;
+    display: flex;
+    padding: 10px 6px;
+    border: 1px solid var(--grey);
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.084);
+    position: relative;
+ }
+ .taskbar .messages .message .mess{
+    width: 95%;max-height: 40px;
+    overflow: hidden;
+ }
+ .taskbar .messages .message .time{
+    position: absolute;
+    bottom: 3%;right: 2%;
+ }
+/* finshed messages */
+/* start of groups */
+.your-groups .group{
+    display: flex;
+    gap: .4rem;
+    margin: .7rem 0;
+}
+.your-groups .group .group-img,.people .people-image{
+    width:45px;height:45px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.your-groups .group .group-img img,.people .people-image img{
+    width: 100%;height: 100%;
+    border-radius: 50%;
+}
+
+.your-groups .group .info .groupName{
+    font-size: .9rem;
+    font-weight: 400;
+    display: inline-block;
+}
+.your-groups .group .info .status{
+    display: inline;
+    font-size: .5rem;
+    color: var(--dark-grey);
+    text-align: start;
+}
+.your-groups .group button{
+    height: 20px;
+    border-radius: 5px;
+    padding:0 2rem;
+    font-size: .7rem;
+    font-weight: 400;
+}
+/* finished groups */
+
+/* start of people */
+
+.know .people{
+    display: flex;
+    padding: 0.6rem;
+    gap:.3rem;
+}
+.know .people .people-details h1{
+    font-weight: 400;
+    font-size: .9rem;
+}
+.know .people .people-details h2{
+    font-weight: 300;
+    color: var(--dark-grey);
+    font-size:.6rem ;
+}
+
+.know .people button{
+    height: 20px;
+    border-radius: 5px;
+    padding:0 1rem;
+    font-size: .5rem;
+    font-weight: 400;
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    align-self: flex-end;
+}
+
+/* end of people */
+
+/* start of taskbar footer */
+.taskbar .footer{
+    margin-top: 1rem;
+    padding: .7rem 0;
+    border-top: 1px solid var(--grey);
+    display: flex;
+    justify-content: center;
+    gap: .3rem;
+}
+.taskbar .footer a{
+    color: var(--black);
+}
+/* end of taskbar footer */
+
+/* end of task bar */
+
+.home .hero-image{
+    width: 100%;height: 250px;
+    object-fit: cover;
+}
+.home .hero-image img{
+    width: 100%;height: 100%;
+}
+
+
+
+
+
 @media screen and (max-width:650px) {
     header.topnav{
         gap: 1rem;
@@ -103,6 +251,10 @@ header.topnav a{
     }
     .topnav .search-bar input{
         max-width: 120px;
+    }
+
+    .taskbar{
+        display: none;
     }
 }
 @media screen and (max-width:375px) {
