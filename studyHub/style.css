@@ -228,16 +228,6 @@ header.topnav a{
 
 /* end of task bar */
 
-.home .hero-image{
-    width: 100%;height: 250px;
-    object-fit: cover;
-}
-.home .hero-image img{
-    width: 100%;height: 100%;
-}
-
-
-
 
 
 @media screen and (max-width:650px) {
