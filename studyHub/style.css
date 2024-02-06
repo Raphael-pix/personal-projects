@@ -230,6 +230,140 @@ header.topnav a{
 
 
 
+.home-main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows:200px auto;
+    grid-template-areas: 
+    "aside hero"
+    "aside content"
+    ;
+}
+.home-main .hero-section{
+    /* grid-area: "hero"; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(images/hero-image-homepage-\(large\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    color: white;
+    height: 200px;
+    position: relative;
+}
+.home-main .hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.365);
+}
+.home-main .hero-section h1{
+    font-size: 1.7rem;
+    font-weight: 400;
+    z-index: 1000;
+}
+.home-main .hero-section h2{
+    font-size: .7rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    z-index: 1000;
+}
+
+.home-main .hero-section .buttons{
+    z-index: 1000;
+}
+.home-main .hero-section .buttons button{
+    padding: 0 1rem;
+    margin: 0 4rem ;
+    font-size: .7rem;
+}
+.content {
+    padding: .5rem 0;
+    padding-left: .7rem;
+}
+.content h1{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.content .recGroups {
+    display: flex;
+    gap: .5rem;
+}
+.content .recGroups .group,.contentBottom .explore .expGroups .group{
+    display: flex;
+    gap: .4rem;
+    margin: .7rem 0;
+    padding: .6rem;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    position: relative;
+    min-width: 250px;height: 110px;
+    width: fit-content;
+    overflow: hidden;
+}
+.content .recGroups .group .group-image{
+    width: 60px;height: 60px;
+    border-radius: 50%;
+}
+.content .recGroups .group .group-image img{
+    width: 100%;height: 100%;
+    border-radius: 50%;
+}
+.content .recGroups .group .group-details h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.content .recGroups .group .group-details h3{
+    font-size: .7rem;
+    color: var(--dark-grey);
+    font-weight: 400;
+}
+.content .recGroups .group button{
+    padding: 0 1rem;
+    font-size: .7rem;
+    font-weight: 400;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 5%; right: 2%;
+}
+
+/* to be fixed */
+.content .recGroups .group .intrests{
+    align-self: flex-end;
+    position: absolute;
+    width: 100%;
+}
+.content .recGroups .group .intrests span{
+    font-size: .6rem;
+    background-color: var(--black);
+    color: white;
+    padding: .5rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.content .recGroups .group .intrests span:hover{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:650px) {
     header.topnav{
         gap: 1rem;
