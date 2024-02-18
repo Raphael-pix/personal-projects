@@ -213,7 +213,7 @@ header.topnav a{
 /* end of people */
 
 /* start of taskbar footer */
-.taskbar .footer{
+ .footer{
     margin-top: 1rem;
     padding: .7rem 0;
     border-top: 1px solid var(--grey);
@@ -221,7 +221,7 @@ header.topnav a{
     justify-content: center;
     gap: .3rem;
 }
-.taskbar .footer a{
+ .footer a{
     color: var(--black);
 }
 /* end of taskbar footer */

@@ -1,0 +1,204 @@
+.messages-main{
+    display: grid;
+    grid-template-columns: minmax(auto,300px) auto minmax(auto,250px);
+    grid-template-rows:minmax(80vh,100vh );
+    grid-template-areas: 
+    "left content right"
+    "left content right"
+    ;
+    position: relative;
+}
+aside.left{
+    grid-area: left;
+    position: absolute;
+    top: 0;left: 0;bottom: 0;
+    max-width: 300px;
+    padding: 10px 7px;
+    border-right: 1px solid var(--grey);
+    z-index: 1000;
+}
+
+.left .title,.right .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.left .title h1,.right .title h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+.left .message .mess,.friend{
+    margin: 12px 0;
+    padding: 0 7px;
+    position: relative;
+    display: flex;
+}
+.left .message .mess .message-img{
+    width:45px;height:45px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #363636;
+    flex-shrink: 0;
+}
+.message-img img,.people-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+.left .message .mess .data{
+    padding: 0 .4rem;
+    font-size: .65rem;
+    color: var(--dark-grey);
+}
+.mess .data h2{
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.mess .data .data-mess .message{
+    width: 95%;max-height: 30px;
+    overflow: hidden;
+}
+.mess .data .data-mess span{
+    width: 8px;height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: inline-block;
+    margin-top: 5px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 2%;top: 2%;
+}
+.time{
+    font-size: .5rem;
+    position: absolute;
+    bottom: 3%;right: 2%;
+}
+
+aside.right{
+    grid-area: right;
+    position: absolute;
+    top: 0;right: 0;bottom: 0;
+    max-width: 250px;
+    width: 100%;
+    padding: 10px 7px;
+    border-left: 1px solid var(--grey);
+    z-index: 1000;
+}
+.friend{
+    margin: 15px 0;
+    gap: .7rem;
+    align-items: center;
+}
+.friend img{
+    width: 40px;height: 40px;
+    border-radius: 50%;
+}
+.friends .know a{
+    color: var(--black);
+}
+.friends .know button{
+    align-self: flex-start;
+}
+.friends .know .people .people-details{
+    align-self: flex-end;
+}
+
+
+section.content{
+    grid-area: content;
+    position: absolute;
+    top: 0;bottom: 0;
+    grid-column: 2/3;
+    width: 100%;
+    width: -webkit-fill-available;
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.content header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--grey);
+    margin-bottom:12px;
+}
+
+.send-message{
+    padding: 6px;
+    margin: 20px 0;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    position: absolute; 
+    bottom: 0;left: 0;right: 0;
+}
+.send-message .send-input{
+    flex: 1;
+    padding: 10px 8px;
+    padding-right: 20px;
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+.send-message .send-input .input-bar{
+    outline: 0;
+    border: 0;
+    flex:1;
+    font-size: 1rem;
+}
+.send-message button{
+    display: flex;
+    gap: 10px;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.content .message-area{
+    font-size: .7rem;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+}
+.content .message-area .message-side{
+    position: absolute;
+}
+.content .message-area .sender{
+    right: 0;
+    padding-right: 10px;
+}
+.content .message-area .recipient{
+    left: 0;
+    padding-left: 10px;
+}
+.content .message-area .message-side .message-textbox{
+    max-width: 300px;
+    height: fit-content;
+    padding: 9px;
+    border-radius: 10px;
+    background-color: var(--dark-grey);
+    position: relative;
+}
+.content .message-area .message-side .sender-message{
+    background-color: #008dc9bd;
+}
+.content .message-area .message-side .recipient-message{
+    background-color: #4CAF50;
+}
+.content .message-area .message-side .message-textbox p{
+    width: 91%;
+}
+.message-side .message-textbox .time{
+    font-size: .7rem;
+}
