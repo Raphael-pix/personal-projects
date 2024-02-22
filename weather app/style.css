@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 1.2rem;
+    background-color: #0d3b55;
+    background: linear-gradient(160deg, #f7ce68 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.container{
+    max-width: 700px;
+    background-color: #f7ce68;
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    border-radius: 20px;
+}
+.container header{
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+}
+.container header input{
+    flex: 1;
+    padding:10px 7px;
+    font-size: .8rem;
+    border-radius: 15px;
+    background-color: white;
+    border: none;
+    outline: 0;
+}
+.container header .search-icon,.container header .location-icon{
+    background-color: white;
+    width: 30px;height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.container header .search-icon img,.container header .location-icon img{
+    margin: auto auto;
+}
+.container-body{
+    display: none;
+}
+.container-body .location-details{
+    color: white;
+    text-align: center;
+    margin: 14px 7px;
+    text-wrap: wrap;
+}
+.condition img{
+    width: 80px;height: 80px;
+}
+.container-body .location-details h1{
+    margin: 8px 0;
+    font-size: 1.9rem;
+}
+.container-body .location-details h2{
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+.container-body .other-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    padding: 10px;
+    margin: 1rem 0;
+}
+.container-body .other-details .other{
+    display: flex;
+    gap: 7px;
+}
+.container-body .other-details .other h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: #080808;
+}
+.container-body .other-details .other p{
+    font-size: 1rem;
+}
+.forecast{
+    display: none;
+    background-color: rgba(254, 254, 254, 0.283);
+    padding: 1rem 7px ;
+    border-radius: inherit;
+    /* transition:ease-in-out 7s; */
+}
+.forecast.show{
+    display: flex;
+    gap:1rem;
+    font-size: 1rem;
+}
+.forecast .day{
+    min-width: 70px;
+    border-radius:20px;
+    padding:7px 10px;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.555);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.forecast .day h3{
+    font-weight: 600;
+    font-size: .9rem;
+}
+.forecast .day p{
+    font-weight: 500;
+    font-size: .7rem;
+}
+.arrow{
+    text-align: center;
+}
