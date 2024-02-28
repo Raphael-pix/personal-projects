@@ -1,0 +1,70 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #53B3CB;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    max-width: 420px;
+    width: 100%;
+}
+.container .container-head h1{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.container .add-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e6e3e3;
+    font-weight: 500;
+    border-radius: 15px;
+}
+.container .add-bar input{
+    border: 0;
+    outline: 0;
+    flex: 1;
+    background-color: transparent;
+    padding: 0 12px;
+}
+.container .add-bar button{
+    padding: 10px 27px;
+    color: white;
+    background-color: #f73152;
+    font-weight: 500;
+    border-radius: inherit;
+    border: none;
+}
+.container .list-container{
+    padding: 10px 12px;
+}
+.container .list-container ul{
+    list-style-position: inside;
+    list-style-type: none;
+}
+.list-container ul li{
+    margin:10px 0;
+    font-weight: 600;
+    position: relative;
+    font-size: 1rem;
+}
+.list-container ul li::before{
+    content: "";
+    position: absolute;
+    width: 15px;height: 15px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+}
