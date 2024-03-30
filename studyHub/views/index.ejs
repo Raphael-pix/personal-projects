@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/logo.png">
+    <script src="/script.js" defer></script>    
+    <title>StudyHub-connect - homepage</title>
+</head>
+<body class="home">
+
+    <header class="topnav">
+        <a href="/">studyHub-connect</a>
+
+        <section class="search-bar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" id="search" placeholder="search for groups">
+        </section>
+
+        <section class="header-img">
+            <img src="/uploads/<%= profilePicture %>" alt="profile picture" width="60px" height="60px">
+        </section>
+
+        <section class="hMenu">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </section>
+    </header>
+
+
+    <main class="home-main">
+    
+    <aside class="taskbar">
+        <section class="title">
+
+            <h1>taskbar</h1>
+        </section>
+
+        <section class="messages" id="messagesConatiner">
+            <a href="messages.html" class="taskbar-header" class="message-title">messages<span class="no"><%= messages.length %></span></a>
+            <div class="messages-container">
+                <% if (messages.length > 0) { %>
+                    <% messages.forEach(message => { %>
+                        <div class="message">
+                            <p class="mess"><%= message.text %></p>
+                            <p class="time"><%= formatTime(message.time) %></p>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <span id="no-message" class="no-message">No new messages</span>
+                <% } %>
+            </div>
+        </section>
+
+        <section class="your-groups">
+            <a href="personal-profile.html" class="taskbar-header">your groups</a>
+            <div class="group">
+                <div class="group-img">
+                    <img src="./images/group-image.jpg" alt="" width="40px" height="40px">
+                </div>
+                <div class="info">
+                    <h1 class="groupName">The breakfast club <span class="status">public</span></h1>
+                   
+                    <button class="message">
+                        <img src="./images/icons/ic--baseline-message.svg" alt="message icon" width="14px" height="14px">
+                        message
+                    </button>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-img">
+                    <img src="./images/group-image.jpg" alt="" width="40px" height="40px">
+                </div>
+                <div class="info">
+                    <h1 class="groupName">The breakfast club <span class="status">public</span></h1>
+                   
+                    <button class="message">
+                        <img src="./images/icons/ic--baseline-message.svg" alt="message icon" width="14px" height="14px">
+                        message
+                    </button>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-img">
+                    <img src="./images/group-image.jpg" alt="" width="40px" height="40px">
+                </div>
+                <div class="info">
+                    <h1 class="groupName">The breakfast club <span class="status">public</span></h1>
+                   
+                    <button class="message">
+                        <img src="./images/icons/ic--baseline-message.svg" alt="message icon" width="14px" height="14px">
+                        message
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="know">
+            <a href="" class="taskbar-header">people you might know</a>
+            <div class="people">
+                <div class="people-image">
+                    <img src="./images/profile-picture.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="people-details">
+                    <h1 class="people-name">john doe</h2>
+                    <h2 class="joinTime">joined 2014</h2>
+                    <button class="follow">
+                        <img src="./images/icons/icons8-follow-64.png" alt="follow icon" width="14px" height="14px">
+                        follow
+                    </button>
+                </div>
+            </div>
+            <div class="people">
+                <div class="people-image">
+                    <img src="./images/profile-picture.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="people-details">
+                    <h1 class="people-name">john doe</h2>
+                    <h2 class="joinTime">joined 2014</h2>
+                    <button class="follow">
+                        <img src="./images/icons/icons8-follow-64.png" alt="follow icon" width="14px" height="14px">
+                        follow
+                    </button>
+                </div>
+            </div>
+            <div class="people">
+                <div class="people-image">
+                    <img src="./images/profile-picture.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="people-details">
+                    <h1 class="people-name">john doe</h2>
+                    <h2 class="joinTime">joined 2014</h2>
+                    <button class="follow">
+                        <img src="./images/icons/icons8-follow-64.png" alt="follow icon" width="14px" height="14px">
+                        follow
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="logout">
+            <button class="logoutbtn">Log out</button>
+        </section>
+
+        <section class="footer">
+            <img src="./images/icons/icons8-help-50.png" alt="help icon"  width="20px" height="20px">
+            <a href="">help</a>
+        </section>
+
+    </aside>
+    
+
+    <section class="hero-section">
+        <h1>Welcome to StudyHub-Connect</h1>
+        <h2>Your gateway to collaborative learning and group synergy!</h2>
+        <section class="buttons">
+            <button class="Cgroup">Create a group</button>
+        </section>
+    </section>
+
+    <section class="content">
+        <h1>recommended</h1>
+        <section class="recGroups">
+            <div class="group">
+                <div class="group-image">
+                    <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="group-details">
+                    <h2 class="group-name">the boys</h2>
+                    <h3 class="status">public</h3>
+                </div>
+                <button class="join">
+                    join
+                </button>
+                <div class="intrests">
+                    <span>web dev</span>
+                    <span>machine learning</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-image">
+                    <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="group-details">
+                    <h2 class="group-name">the boys</h2>
+                    <h3 class="status">public</h3>
+                </div>
+                <button class="join">
+                    join
+                </button>
+                <div class="intrests">
+                    <span>web dev</span>
+                    <span>machine learning</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-image">
+                    <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="group-details">
+                    <h2 class="group-name">the boys</h2>
+                    <h3 class="status">public</h3>
+                </div>
+                <button class="join">
+                    join
+                </button>
+                <div class="intrests">
+                    <span>web dev</span>
+                    <span>machine learning</span>
+                </div>
+            </div>
+            <div class="group">
+                <div class="group-image">
+                    <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                </div>
+                <div class="group-details">
+                    <h2 class="group-name">the boys</h2>
+                    <h3 class="status">public</h3>
+                </div>
+                <button class="join">
+                    join
+                </button>
+                <div class="intrests">
+                    <span>web dev</span>
+                    <span>machine learning</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contentBottom">
+            <section class="explore">
+                <h1>explore</h1>
+                <section class="expGroups">
+                    <div class="group">
+                        <div class="group-image">
+                            <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                        </div>
+                        <div class="group-details">
+                            <h2 class="group-name">the boys</h2>
+                            <h3 class="status">public</h3>
+                            <button class="join">
+                                join
+                            </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-image">
+                            <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                        </div>
+                        <div class="group-details">
+                            <h2 class="group-name">the boys</h2>
+                            <h3 class="status">public</h3>
+                            <button class="join">
+                                join
+                            </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-image">
+                            <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                        </div>
+                        <div class="group-details">
+                            <h2 class="group-name">the boys</h2>
+                            <h3 class="status">public</h3>
+                            <button class="join">
+                                join
+                            </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-image">
+                            <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                        </div>
+                        <div class="group-details">
+                            <h2 class="group-name">the boys</h2>
+                            <h3 class="status">public</h3>
+                            <button class="join">
+                                join
+                            </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group-image">
+                            <img src="./images/group-creation.jpg" alt="profile image" width="44px" height="44px">
+                        </div>
+                        <div class="group-details">
+                            <h2 class="group-name">the boys</h2>
+                            <h3 class="status">public</h3>
+                            <button class="join">
+                                join
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            </section>
+        </section>
+    </section>
+    </main>
+    <script>
+        document.querySelector('.Cgroup').addEventListener('click',()=>{
+            window.location.href = '/createGroupProfile'
+        })
+        console.log(document.querySelector('.logoutbtn'))
+        document.querySelector('.logoutbtn').addEventListener('click',()=>{
+        window.location.href = '/logout'
+        })
+    </script>
+</body>
+</html>

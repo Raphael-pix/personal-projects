@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/forms.css">
+  <link rel="icon" href="./images/logo.png">
+  <title>StudyHub-connect - create group</title>
+</head>
+<body class="group-creation">
+  <header class="topnav">
+    <a href="/">studyHub-connect</a>
+    <section class="search-bar">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="search" name="search" id="search" placeholder="search for groups">
+    </section>
+    <section class="header-img">
+      <img src="/uploads/<%= profilePicture %>" alt="profile picture" width="60px" height="60px">
+    </section>
+    <section class="hMenu">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </section>
+  </header>
+  <section class="container">
+
+    <form action="/createGroupProfile" method="post" class="form" id="profile" enctype="multipart/form-data" novalidate onsubmit="updateMembersAndRulesArray();">
+      <section class="form-element">
+            <div class="profile-pic">
+              <img src="./images/form-images-small.jpg" alt="profile picture" width="60px" height="60px">
+            </div>
+            <button class="edit" id="editProfilePhotoBtn">Edit profile photo</button>
+            <input type="file" id="profilePictureInput" name="profilePicture" accept="image/*" style="display: none;">
+        </section>
+
+        <section class="form-element">
+          <label for="name">Group name</label>
+          <div class="input-bar">
+            <img src="./images/icons/icons8-person-64.png" alt="person icon" width="14px" height="14px">
+            <input type="text" name="groupname"  id="groupname" required>
+          </div>
+      
+        </section>
+
+
+        <section class="form-element" id="members">
+            <div class="top">
+              <div class="title">
+                <h3>Add members</h3>
+                <img src="images/icons/gg--add.svg" alt=" add icon" class=" addmember" width="18px" height="18px">
+              </div>
+              <div class="searchMemb" id="searchMemb">
+                <input type="search" name="serchUser" id="searchUser">
+                <button class="searchUserbtn">search</button>
+              </div>
+            </div>
+            <ul class="membersList" id="membersList">
+            </ul>
+        </section>
+
+        <section class="form-element" id="rules">
+            <label for="name">Add rules</label>
+            <div class="input-bar">
+              <textarea name="addRule" id="addRule" cols="40" rows="2"></textarea>
+              <button class="addrulebtn">Add</button>
+            </div>
+            <ol class="rulesList" id="rulesList">
+          </ol>
+          <input type="hidden" id="selectedrules" name="intrests" value="">
+        </section>
+
+        <section class="form-element" id="intrests">
+            <label for="intrests">Intrests</label>
+            <div class="input-bar" name="input-bar">
+                <label for="">Data Science<input type="checkbox" name="intrest" id="Dsci" value="Data Science"></label>
+                <label for="">Web development<input type="checkbox" name="intrest" id="webdev" value="Web development"></label>
+                <label for="">machine learning<input type="checkbox" name="intrest" id="ml" value="machine learning"></label>
+                <label for="">writing<input type="checkbox" name="intrest" id="writing" value="writing"></label>
+                <label for="">Engineering<input type="checkbox" name="intrest" id="eng" value="Engineering"></label>
+                <label for="">Medicine<input type="checkbox" name="intrest" id="med" value="Medicine"></label>
+                <label for="">business<input type="checkbox" name="intrest" id="business" value="business"></label>
+                <label for="">UI/UX<input type="checkbox" name="intrest" id="ui/ux" value="UI/UX"></label>
+                <label for="">architecture<input type="checkbox" name="intrest" id="arch" value="architecture"></label>
+            </div>
+            <input type="hidden" id="selectedInterests" name="intrests" value="">
+        </section>
+      
+      <button type="submit" class="submit" id="add-btn">Create group</button>
+      <a href="/" class="back">back</a>
+      
+    </form>
+    
+</section>
+<script src="/profile.js" defer></script>
+</body>
+</html>

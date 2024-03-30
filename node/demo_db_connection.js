@@ -8,10 +8,10 @@ var con =  mysql.createConnection({
 });
 
 con.connect(function(err){
-    var query = "SELECT * FROM customers";
     if(err)throw err;
-    con.query(query,function(err,result,fields){
+    var query = "DROP TABLE customers";
+    con.query(query,function(err,result){
         if(err)throw err;
-        console.log(fields)
+        console.log("Table deleted")
     })
 })

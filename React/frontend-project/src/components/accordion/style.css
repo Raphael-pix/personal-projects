@@ -1,0 +1,45 @@
+.wrapper{
+    margin: auto auto;
+    max-width: 500px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.wrapper button{
+    padding: 10px;
+    color: white;
+    background-color:rgb(58, 163, 255);
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.wrapper button:hover{
+    background-color:rgb(32, 151, 255);
+}
+.accordion .item {
+    margin: 1rem 0;
+}
+.accordion .item .title{
+    background-color: rgb(58, 163, 255);
+    color: white;
+    padding: 4px 0;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item .title span{
+    color: whitesmoke;
+    position: absolute;
+    right: 5%;
+    font-size: 1.6rem;
+}
+.item .title span:hover{
+    color: white;
+}
+.accordion .item .content{
+    box-shadow: 0 1px 1px #c2c2c2;
+    padding: 10px 4px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/forms.css">
+  <link rel="icon" href="./images/logo.png">
+  <title>StudyHub-connect - create study room</title>
+</head>
+<body class="group-creation">
+  <header class="topnav">
+    <a href="/">studyHub-connect</a>
+    <section class="search-bar">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="search" name="search" id="search" placeholder="search for groups">
+    </section>
+    <section class="header-img">
+      <img src="/uploads/<%= profilePicture %>" alt="profile picture" width="60px" height="60px">
+    </section>
+    <section class="hMenu">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </section>
+  </header>
+  <section class="container">
+
+    <form action="/createstudyRoom" method="post" class="form" id="profile" novalidate>
+      
+      
+      <button type="submit" class="submit" id="add-btn">Create Study Room</button>
+      <a href="/" class="back">back</a>
+      
+    </form>
+    
+</section>
+<script src="/profile.js" defer></script>
+</body>
+</html>
