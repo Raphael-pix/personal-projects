@@ -1,0 +1,88 @@
+.hero-section{
+    width: 100%;height: 448px;
+    position: relative;
+}
+.current-poster{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+}
+.hide-current-poster{
+   opacity: 0;
+}
+.poster-info{
+    margin:30px 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    z-index: 2;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width:18px;height: 30px;
+    margin-right: 4px;
+}
+.logo span{
+    font-size: .8rem;
+    font-weight: 500;
+    color: #B9BBB9;
+    text-transform: uppercase
+}
+.poster-title{
+    margin: 0;
+    font-weight: 800;
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+.overview{
+    width: 45rem;
+    line-height: 1.3rem;
+    padding-top: 1rem;
+    font-size: .8rem;
+    max-width: 360px;
+    height: 80px;
+}
+.buttons{
+    display:  flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+.buttons button{
+    display: flex;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+.buttons .more{
+    background-color: #515451;
+    color: white;
+}
+.cover-darken{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background-color: rgba(0, 0, 0, 0.436);
+}
+.fade-bottom{
+    height: 1.8rem;width: 100%;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37, 37, 37, 0.333),
+        #111
+    );
+    position: absolute;
+    bottom: 0;
+}
