@@ -4,8 +4,15 @@ import './App.css';
 // import RandomColorGenerator from './components/random-color';
 // import StarRating from './components/star-rating';
 // import ImageSlider from './components/image-slider';
-import LoadMore from './components/load-more';
 // import ImageSlider from './components/Image-slider-api';
+// import LoadMore from './components/load-more';
+// import TreeMenu from './components/tree-menu';
+// import treeview from './components/tree-menu/data';
+// import Theme from './components/theme';
+// import ScrollIndicator from './components/scroll-indicator';
+// import TabTest from './components/custom-tabs';
+import QRCodeGenerator from './components/qr-code-generator';
+
 
 function App() {
   return (
@@ -28,7 +35,23 @@ function App() {
 
 
       {/* Project 5: load more component */}
-      <LoadMore url="https://dummyjson.com/products"/>
+      {/* <LoadMore url="https://dummyjson.com/products"/> */}
+
+      {/* Project 6: tree menu component */}
+      {/* <TreeMenu menus={treeview}/> */}
+
+      {/* project 7: theme component/light-dark mode */}
+      {/* <Theme/> */}
+
+      {/* project 8: scroll indicator */}
+      {/* <ScrollIndicator url="https://dummyjson.com/products"/> */}
+
+      {/* project 9: custom tabs */}
+      {/* <TabTest/> */}
+
+      {/* project 10: QR-code generator */}
+      <QRCodeGenerator/>
+
     </div>
   );
 }

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scroll-indicator-container{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background-color: green;
+    color: white;
+    padding-top:8px;
+    text-transform: capitalize;
+}
+.top-indicator{
+    height: 10px;
+    margin-top: 16px;
+    background-color: greenyellow;
+}
+.current-indicator{
+    height: inherit;
+    background-color: purple;
+}
+.data-list{
+    margin-top: 80px;
+    list-style-type: none;
+    font-size: 40px;
+}
+.data-list li{
+    margin-bottom: 16px;
+}

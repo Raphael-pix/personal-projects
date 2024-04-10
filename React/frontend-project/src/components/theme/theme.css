@@ -1,0 +1,38 @@
+:root{
+    --background: #f9f9f9;
+    --text: #0e0e0e;
+    --button-bg:#0e0e0e;
+    --button-text:#f9f9f9;
+}
+[data-theme = "dark"]{
+    --background: #0e0e0e;
+    --text: #f9f9f9;
+    --button-bg:#f9f9f9;
+    --button-text:#0e0e0e;
+}
+.theme-container{
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    transition: all 1s ease-out;
+    padding: 10px;
+}
+.theme-container p{
+    color: var(--text);
+    font-size: 50px;
+    font-weight: 500;
+}
+.theme-container button{
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
