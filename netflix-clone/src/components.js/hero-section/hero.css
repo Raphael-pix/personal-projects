@@ -86,3 +86,25 @@
     position: absolute;
     bottom: 0;
 }
+
+@media screen and (max-width:375px) {
+    .poster-info{
+        width: 100%;
+        text-align: center;
+    }
+    .logo img{
+        width:23px;height: 35px;
+    }
+    .logo span{
+        font-size: 1rem;
+    }
+    .poster-title{
+        font-size: 2rem;
+    }
+    .overview{
+        display: none;
+    }
+    .logo,.buttons{
+        justify-content: center;
+    }
+}

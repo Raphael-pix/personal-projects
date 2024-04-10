@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function Header(){
 
     const[show,handleShow]=useState(false)
+    const [changeLogo,setChangeLogo]=useState(false)
 
     useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -14,9 +15,22 @@ export default function Header(){
             }else handleShow(false)
         })
     },[])
+    useEffect(()=>{
+        function handleResize(){
+            if(window.innerWidth > 375){
+                setChangeLogo(false)
+            }else setChangeLogo(true)
+        }
+
+        window.addEventListener("resize",handleResize)
+
+        return() => {
+            window.addEventListener("resize",handleResize)
+        }
+    },[])
 
     return <div className="header-container" style={show ? {backgroundColor:"#111"}:{backgroundColor:"transparent"}}>
-        <img src="../images/logos--netflix.svg" alt="netflix logo" className="logo"/>
+        <img src={changeLogo ? "../images/simple-icons--netflix.svg" : "../images/logos--netflix.svg"} alt="netflix logo" className="logo"/>
 
         <ul className="nav-menu">
             {

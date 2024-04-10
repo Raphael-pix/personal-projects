@@ -48,3 +48,17 @@
     object-fit: contain;
     height: 22px;width: 100%;
 }
+
+
+
+@media screen and (max-width:375px) {
+    .header-container{
+        padding: 10px 4px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .logo{
+        width: auto;
+    }
+}

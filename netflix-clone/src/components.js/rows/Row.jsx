@@ -11,6 +11,7 @@ export default function Row({ title, url, isLarge }) {
     try {
       const data = await fetchMovies(url);
       setMovies(data);
+      
     } catch (e) {
       console.error(e);
     }
@@ -19,7 +20,7 @@ export default function Row({ title, url, isLarge }) {
   useEffect(() => {
     fetchData();
   }, [url]);
-  console.log(movies)
+
 
   return (
     <div className="row-container">
@@ -30,7 +31,6 @@ export default function Row({ title, url, isLarge }) {
             src={`${imageUrl}${isLarge ? movie.poster_path : movie.backdrop_path}`}
             alt={movie.title || movie.name}
             className={`movie-poster ${isLarge?"movie-poster-large":""}`}
-            title={!isLarge?movie.title || movie.name || movie.original_name || movie.original_title :null} 
             key={movie.id}
           />
         ))}

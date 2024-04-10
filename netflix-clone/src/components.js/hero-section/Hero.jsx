@@ -7,17 +7,19 @@ import {FaPlay,FaInfo} from "react-icons/fa"
 function Hero({url}) {
     const [moviePosters,setMoviePosters]=useState([])
     const [visiblePoster,setVisiblePoster]=useState(0)
+    const [changeBg,setChangeBg] = useState(false)
     const imageUrl ="https://image.tmdb.org/t/p/original"
     
     async function fetchData(){
         try{
+
             const data =  await fetchMovies(url)
             setMoviePosters(data)
         }catch(e){
             console.error(e)
         }
     }
-    console.log(moviePosters)
+
     useEffect(()=>{
         fetchData()    
     },[url])
@@ -29,6 +31,19 @@ function Hero({url}) {
 
         return () => clearInterval(interval); // Clean up the interval on component unmount
     }, [moviePosters]);
+
+    useEffect(()=>{
+        function handleResize(){
+            if(window.innerWidth > 375){
+                setChangeBg(false)
+            }else setChangeBg(true)
+        }
+        window.addEventListener("resize",handleResize)
+        return() => {
+            window.addEventListener("resize",handleResize)
+        }
+    },[])
+
 
     function truncate(str, n) {
         if (str.length <= n) return str; // Return the original string if its length is less than or equal to n
@@ -44,15 +59,15 @@ function Hero({url}) {
             return str.substr(0, lastSpaceIndex) + '...';
         }
     }
-    
 
   return (
     <div className='hero-section'>
       {
         moviePosters.map((poster,index)=>{
             const heroBackground = `${imageUrl}${poster.backdrop_path}`;
+            const heroBackground_phone = `${imageUrl}${poster.poster_path}`;
             return(
-            <div  key={poster.id}  style={{backgroundImage: `url(${heroBackground})`}} className={index === visiblePoster ? "current-poster" : "current-poster hide-current-poster"}>
+            <div  key={poster.id}  style={{backgroundImage: `url(${changeBg ? heroBackground_phone : heroBackground})` }} className={index === visiblePoster ? "current-poster" : "current-poster hide-current-poster"}>
                 {/* to darken the background image so that the text is more visible */}
                 <div className="cover-darken"></div>
                 <div className="poster-info">

@@ -21,12 +21,12 @@
 }
 .movie-posters{
     display: flex;
-    gap: 11px;
+    gap: 16px;
 }
 .movie-poster{
     object-fit: contain;
     width: 100%;
-    max-height: 120px;
+    max-height: 160px;
     padding: 13px 0;
     transition:  transform 450ms;
     cursor: pointer;
@@ -39,4 +39,12 @@
 }
 .movie-poster-large:hover{
     transform: scale(1.09);
+}
+
+
+@media screen and (max-width:375px) {
+    .row-container{
+        padding:0 0 5px 9px;
+    }
+
 }
