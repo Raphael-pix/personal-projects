@@ -11,7 +11,8 @@ import './App.css';
 // import Theme from './components/theme';
 // import ScrollIndicator from './components/scroll-indicator';
 // import TabTest from './components/custom-tabs';
-import QRCodeGenerator from './components/qr-code-generator';
+// import QRCodeGenerator from './components/qr-code-generator';
+import ModuleTest from './components/module-popup';
 
 
 function App() {
@@ -50,8 +51,10 @@ function App() {
       {/* <TabTest/> */}
 
       {/* project 10: QR-code generator */}
-      <QRCodeGenerator/>
+      {/* <QRCodeGenerator/> */}
 
+      {/* project 11: module popup component */}
+      <ModuleTest/>
     </div>
   );
 }
