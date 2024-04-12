@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import fetchMovies from '../../utils/fetchmovies'
 import "./hero.css"
-import {FaPlay,FaInfo} from "react-icons/fa"
+import {FaPlay,FaInfo,FaAngleRight,FaAngleLeft} from "react-icons/fa"
 
 
 function Hero({url}) {
@@ -60,6 +60,13 @@ function Hero({url}) {
         }
     }
 
+    function handlePrevious(){
+        setVisiblePoster(prevVisiblePoster => (prevVisiblePoster === 0 ? moviePosters.length - 1 : prevVisiblePoster - 1));
+    }
+    function handleNext(){
+        setVisiblePoster(prevVisiblePoster => (prevVisiblePoster === moviePosters.length - 1 ? 0 : prevVisiblePoster + 1));
+    }
+
   return (
     <div className='hero-section'>
       {
@@ -93,6 +100,16 @@ function Hero({url}) {
                         </button>
                     </div>
                 </div>
+
+                <div className="hero-icons">
+                    <div className="hero-icon left" onClick={()=>handlePrevious()}>
+                        <FaAngleLeft size={26} className='left-icon'/>
+                    </div>
+                    <div className="hero-icon right" onClick={()=>handleNext()}>
+                        <FaAngleRight size={26} className='right-icon'/>
+                    </div>
+                </div>
+
                 <div className="fade-bottom"></div>
             </div>
          )

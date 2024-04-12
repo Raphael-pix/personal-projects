@@ -39,6 +39,7 @@
     font-weight: 800;
     font-size: 3rem;
     padding-bottom: 10px;
+    max-width: 800px;
 }
 .overview{
     width: 45rem;
@@ -87,7 +88,29 @@
     bottom: 0;
 }
 
+.hero-icons{
+    position: absolute;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+}
+.hero-icon{
+    padding: 20px;
+    background-color: #80808069;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+.hero-icon:hover{
+    background-color: #111;
+}
+
 @media screen and (max-width:375px) {
+    .current-poster{
+       background-position: center;
+    }
     .poster-info{
         width: 100%;
         text-align: center;
@@ -106,5 +129,8 @@
     }
     .logo,.buttons{
         justify-content: center;
+    }
+    .hero-icon{
+        padding: 10px;
     }
 }
